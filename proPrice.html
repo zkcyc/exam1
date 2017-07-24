@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>麦子商城</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<style type="text/css">
+			#pageMain{
+				z-index: 1000;
+			}
+			#pagePrice{
+				color: #666;
+				text-decoration: none;
+				font-size: 14px;
+			}
+			#pagePrice:hover{
+				color: #D6290B;
+				text-decoration: underline;
+				font-weight: bold;
+			}
+			.protr{
+				text-align: center;
+				height: 60px;
+			}
+			.protr a{
+				text-decoration: none;
+				color: #000000;
+			}
+			.protr a:hover{
+				color: #D6290B;
+				text-decoration: underline;
+			}
+			.protr:nth-child(2n+1){
+				background-color: #f5f5f5;
+			}
+			.protr:hover{
+				background-color: #ddd;
+			}
+		</style>
+	</head>
+	<body>
+		<!--外部容器-->
+		<div id="container" style="position: relative;">
+			<!--页面头部-->
+			<div id="pageTop">
+				<img src="img/logo.jpg"/>
+				<p>你好，欢迎来到麦子商城！想继续购物？<a href="login.html">【请登录】</a>，新用户？<a href="zuce.html">【免费注册】</a></p>
+				<div id="toplink">
+					<ul>
+						<li><a href="#">帮助中心</a>&nbsp;|</li>
+						<li><a href="#">客户反馈</a>&nbsp;|</li>
+						<li><a href="#">网站地图</a>&nbsp;|</li>
+						<li><a href="#">加入收藏</a></li>
+					</ul>
+				</div>
+				<div id="date"></div>
+				<div id="top_info"><marquee behavior="scroll" direction="up" scrolldelay="500"><a href="#">最新公告：明天有秒杀活动！</a></marquee></div>
+				<!--顶部导航-->
+				<div id="nav">
+					<ul>
+						<li><a href="index.html">网站首页</a></li>
+						<li><a href="#">分类导航</a></li>
+						<li><a href="#">品牌导航</a></li>
+						<li><a href="#">购物帮助</a></li>
+						<li><a href="#">新闻资讯</a></li>
+						<li><a href="#">报价单</a></li>
+						<li><a href="#">发货单</a></li>
+					</ul>
+				</div><!--顶部导航结束-->
+				
+				<!--顶部搜索和购物车-->
+				<div id="search" style="line-height: 34px;">
+					<p style="color: white;font-size: 14px;font-weight: bold;line-height: 34px;text-indent: 25px;">商品搜索：</p>
+					<select style="width: 100px;height: 20px;">
+						<option>所有分类</option><option>最新商品</option><option>热卖商品</option><option>折扣商品</option>
+					</select>
+					<form action="" style="display: inline-block;">
+						<input type="text" style="width: 260px; height: 17px;" />
+						<input type="button" value="搜索" style="width: 40px;height: 22px;" />
+					</form>
+					<span id="topsearch"><a href="#">高级/组合搜索</a></span>
+					<div id="search_right">
+						<p id="car"><a href="cart.html">购物车暂时为空</a></p>
+						<p id="jiesuan"><a href="jiesuan.html">去结算</a></p>
+						<p id="userCenter"><a href="#">用户中心</a></p>
+					</div>
+				</div><!--顶部搜索和购物车结束-->
+			</div><!--页面头部结束-->
+			
+			<!--页面中间主体部分-->
+			<div id="pageMain">
+				<div style="float: right;margin-top: 10px;"><a href="#" id="pagePrice">打印报价单</a></div>
+				<h4 style="clear: both;font-size: 14px;">生活家电</h4>
+				<div id="protable">
+					<table style="width: 100%;">
+						<tr style="background: #F5F5F5;height: 30px;">
+							<th>图片</th><th>商品</th><th>零售价</th><th>本站价</th><th>库存</th><th>购买</th>
+						</tr>
+						<tr class="protr">
+							<td><img src="productImg/1.png" width="50px" height="50px"/></td>
+							<td>霍尼韦尔(Honeywell)5010-CHN空气净化器</td>
+							<td>￥1998.00元</td>
+							<td style="color: #D6290B;font-weight: bold;">￥1588.00元</td>
+							<td>967</td>
+							<td><a href="#">定购</a></td>
+						</tr>
+						<tr class="protr">
+							<td><img src="productImg/2.png" width="50px" height="50px"/></td>
+							<td>戴尔(Dell)I560SR-128 商用台</td>
+							<td>￥3999.00元</td>
+							<td style="color: #D6290B;font-weight: bold;">￥3599.00元</td>
+							<td>220</td>
+							<td><a href="#">定购</a></td>
+						</tr>
+						<tr class="protr">
+							<td><img src="productImg/3.png" width="50px" height="50px"/></td>
+							<td>爱普生(Epson)EPL-N2500 A3黑白</td>
+							<td>￥7599.00元</td>
+							<td style="color: #D6290B;font-weight: bold;">￥7099.00元</td>
+							<td>97</td>
+							<td><a href="#">定购</a></td>
+						</tr>
+						<tr class="protr">
+							<td><img src="productImg/4.png" width="50px" height="50px"/></td>
+							<td>美的(midea)电脑版电压力锅PCS507</td>
+							<td>￥389.00元</td>
+							<td style="color: #D6290B;font-weight: bold;">￥289.00元</td>
+							<td>109</td>
+							<td><a href="#">定购</a></td>
+						</tr>
+						<tr class="protr">
+							<td><img src="productImg/5.png" width="50px" height="50px"/></td>
+							<td>创维(Skyworth)32英寸液晶电视</td>
+							<td>￥2599.00元</td>
+							<td style="color: #D6290B;font-weight: bold;">￥219900元</td>
+							<td>567</td>
+							<td><a href="#">定购</a></td>
+						</tr>
+						<tr class="protr">
+							<td><img src="productImg/6.png" width="50px" height="50px"/></td>
+							<td>索尼爱立信Z610c超经典镜面</td>
+							<td>￥1395.00元</td>
+							<td style="color: #D6290B;font-weight: bold;">￥1095.00元</td>
+							<td>784</td>
+							<td><a href="#">定购</a></td>
+						</tr>
+						<tr class="protr">
+							<td><img src="productImg/7.png" width="50px" height="50px"/></td>
+							<td>HP笔记本 dv2-1201AX特价</td>
+							<td>￥4395.00元</td>
+							<td style="color: #D6290B;font-weight: bold;">￥3995.00元</td>
+							<td>664</td>
+							<td><a href="#">定购</a></td>
+						</tr>
+						<tr class="protr">
+							<td><img src="productImg/8.png" width="50px" height="50px"/></td>
+							<td>佳能A1100IS数码相机 1200万像素</td>
+							<td>￥4395.00元</td>
+							<td style="color: #D6290B;font-weight: bold;">￥4195.00元</td>
+							<td>64</td>
+							<td><a href="#">定购</a></td>
+						</tr>
+					</table>
+				</div>
+				<p>
+					第1页/共1页&nbsp;&nbsp;<span><a href="#" style="color: #111;text-decoration: none;">上一页</a></span>&nbsp;&nbsp;<span><a href="#" style="color: #111;text-decoration: none;">下一页</a></span>
+					&nbsp;&nbsp;页面跳转：<span><input type="text" style="width: 30px;"/></span>
+					<span><input type="button" value="Go" /></span>
+				</p>
+				<p style="font-weight: bold;">选择页数：<span style="color: #D6290B;">1</span></p>
+			</div><!--页面中间主体部分结束-->
+			
+			<!--页面底部-->
+			<div id="pageFooter">
+				<!--底部导航开始-->
+				<div id="footnav">
+					<ul class="footnavul">
+						<li class="footnavli">
+							<h4>关于我们</h4>
+							<ul class="footlist">
+								<li><span>&gt;</span><a href="#">发展历程</a></li>
+								<li><span>&gt;</span><a href="#">联系方式</a></li>
+								<li><span>&gt;</span><a href="#">公司介绍</a></li>
+								<li><span>&gt;</span><a href="#">企业文化</a></li>
+							</ul>
+						</li>
+						<li class="footnavli">
+							<h4>付款方式</h4>
+							<ul class="footlist">
+								<li><span>&gt;</span><a href="#">银行汇款</a></li>
+								<li><span>&gt;</span><a href="#">在线支付</a></li>
+								<li><span>&gt;</span><a href="#">货到付款</a></li>
+								<li><span>&gt;</span><a href="#">公司转账</a></li>
+							</ul>
+						</li>
+						<li class="footnavli">
+							<h4>送货方式</h4>
+							<ul class="footlist">
+								<li><span>&gt;</span><a href="#">上门自提</a></li>
+								<li><span>&gt;</span><a href="#">EMS快递</a></li>
+								<li><span>&gt;</span><a href="#">快递发货</a></li>
+								<li><span>&gt;</span><a href="#">平邮发货</a></li>
+							</ul>
+						</li>
+						<li class="footnavli">
+							<h4>售后服务</h4>
+							<ul class="footlist">
+								<li><span>&gt;</span><a href="#">质保承诺</a></li>
+								<li><span>&gt;</span><a href="#">退换货政策</a></li>
+								<li><span>&gt;</span><a href="#">价格保护</a></li>
+								<li><span>&gt;</span><a href="#">返修申请</a></li>
+							</ul>
+						</li>
+						<li class="footnavli">
+							<h4>购物帮助</h4>
+							<ul class="footlist">
+								<li><span>&gt;</span><a href="#">用户等级</a></li>
+								<li><span>&gt;</span><a href="#">积分获得与使用</a></li>
+								<li><span>&gt;</span><a href="#">购物流程</a></li>
+								<li><span>&gt;</span><a href="#">常见问题</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div><!--底部导航结束-->
+				
+				<!--底部信息-->
+				<div id="footInfo">
+					<p><a href="#">淘宝店</a><a href="#">易趣店</a><a href="#">拍拍店</a><a href="#">有啊店</a></p>
+					<p>Copyright 2015 <span>127.0.0.1. </span>All Rights Reserved 版权所有：广州网软志成信息科技有限公司</p>
+					<p>客户服务热线：020-34506590&nbsp;&nbsp;传真：020-34506590</p>
+					<p>客户服务邮箱：<span>webmaster@wrzc.net 粤ICP备06122404号&nbsp;管理进入</span></p>
+				</div><!--底部信息结束-->
+			</div><!--页面底部结束-->
+		</div><!--外部容器结束-->
+		
+		<script src="js/getTime.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
+

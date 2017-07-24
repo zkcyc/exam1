@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>麦子商城</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="css/productlist.css"/>
+		<link rel="stylesheet" type="text/css" href="css/productInfo.css"/>
+		<style type="text/css">
+			#pageMain{
+				min-height: 100px;
+			}
+			#pageMain_left{
+				min-height: 100px;
+			}
+			#zuce{
+				width: 100%;
+				min-height: 300px;
+				text-align: left;
+				margin: 5px auto;
+			}
+			#zuce table{
+				margin: 5px auto;
+			}
+			#zuce tr{
+				height: 30px;
+				line-height: 30px;
+			}
+			#zuce tr td{
+				font-size: 14px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--外部容器-->
+		<div id="container" style="position: relative;">
+			<!--页面头部-->
+			<div id="pageTop">
+				<img src="img/logo.jpg"/>
+				<p>你好，欢迎来到麦子商城！想继续购物？<a href="login.html">【请登录】</a>，新用户？<a href="zuce.html">【免费注册】</a></p>
+				<div id="toplink">
+					<ul>
+						<li><a href="#">帮助中心</a>&nbsp;|</li>
+						<li><a href="#">客户反馈</a>&nbsp;|</li>
+						<li><a href="#">网站地图</a>&nbsp;|</li>
+						<li><a href="#">加入收藏</a></li>
+					</ul>
+				</div>
+				<div id="date"></div>
+				<div id="top_info"><marquee behavior="scroll" direction="up" scrolldelay="500"><a href="#">最新公告：明天有秒杀活动！</a></marquee></div>
+				<!--顶部导航-->
+				<div id="nav">
+					<ul>
+						<li><a href="index.html">网站首页</a></li>
+						<li><a href="#">分类导航</a></li>
+						<li><a href="#">品牌导航</a></li>
+						<li><a href="#">购物帮助</a></li>
+						<li><a href="#">新闻资讯</a></li>
+						<li><a href="#">报价单</a></li>
+						<li><a href="#">发货单</a></li>
+					</ul>
+				</div><!--顶部导航结束-->
+				
+				<!--顶部搜索和购物车-->
+				<div id="search" style="line-height: 34px;">
+					<p style="color: white;font-size: 14px;font-weight: bold;line-height: 34px;text-indent: 25px;">商品搜索：</p>
+					<select style="width: 100px;height: 20px;">
+						<option>所有分类</option><option>最新商品</option><option>热卖商品</option><option>折扣商品</option>
+					</select>
+					<form action="" style="display: inline-block;">
+						<input type="text" style="width: 260px; height: 17px;" />
+						<input type="button" value="搜索" style="width: 40px;height: 22px;" />
+					</form>
+					<span id="topsearch"><a href="#">高级/组合搜索</a></span>
+					<div id="search_right">
+						<p id="car"><a href="#">购物车暂时为空</a></p>
+						<p id="jiesuan"><a href="#">去结算</a></p>
+						<p id="userCenter"><a href="#">用户中心</a></p>
+					</div>
+				</div><!--顶部搜索和购物车结束-->
+			</div><!--页面头部结束-->
+			
+			<!--页面中间主体部分-->
+			<div id="pageMain">
+				<!--左边-->
+				<div id="pageMain_left">
+					<div id="userbox">
+						<h3>用户信息</h3>
+						<ul>
+							<li style="background: url(img/1.gif) no-repeat;"><a href="#">注册/登陆</a></li>
+							<li style="background: url(img/8.gif) no-repeat;"><a href="#">购物车（0）</a></li>
+							<li style="background: url(img/10.gif) no-repeat;"><a href="#">对比框（0）</a></li>
+						</ul>
+					</div>
+				</div><!--左边结束-->
+				
+				<div id="pro_right">
+					<!--您的位置-->
+					<div id="myaddress">
+						<span>
+							您的位置：<a href="index.html">首页</a>&nbsp;&raquo;&nbsp;新用户注册：
+							<span style="margin-left: 20px;">(老用户请<a href="#">登陆</a>，忘记密码请<a href="#">点击这里</a>)</span>
+						</span>
+					</div><!--您的位置结束-->
+					
+					<!--注册表单开始-->
+					<div id="zuce">
+						<form action="" id="form">
+							<table>
+								<tr>
+									<td style="text-align: right;"><span style="color: #D6290B;margin-right: 5px;">*</span>用户名：</td>
+									<td ><input type="text" name="username" id="userName" style="width: 200px;" /></td>
+								</tr>
+								<tr>
+									<td style="text-align: right;"><span style="color: #D6290B;margin-right: 5px;">*</span>密码：</td>
+									<td ><input type="password" name="password" id="password" style="width: 200px;"/></td>
+								</tr>
+								<tr>
+									<td style="text-align: right;"><span style="color: #D6290B;margin-right: 5px;">*</span>密码确认：</td>
+									<td ><input type="password" name="relpassword" id="relpassword" style="width: 200px;"/></td>
+								</tr>
+								<tr>
+									<td style="text-align: right;"><span style="color: #D6290B;margin-right: 5px;">*</span>电子邮箱：</td>
+									<td ><input type="text" name="email" id="email" style="width: 200px;"/></td>
+								</tr>
+								<tr>
+									<td style="text-align: right;">密码保护问题：</td>
+									<td><input type="text" id="question" style="width: 200px;"/>建议填写，否则将无法使用密码找回功能!</td>
+									
+								</tr>
+								<tr>
+									<td style="text-align: right;">密码保护答案：</td>
+									<td><input type="text" id="answer" style="width: 200px;"/>建议填写，否则将无法使用密码找回功能!</td>
+									
+								</tr>
+								<tr>
+									<td colspan="2" >
+										<input style="margin-left: 120px;" type="checkbox" id="ischeck" />请确认阅读并同意&laquo;<a href="#">注册协议</a>&raquo;
+									</td>
+								</tr>
+								<tr >
+									<td colspan="2">
+										<input  type="submit" name="sumit" id="sumit" value="确认" style="width: 100px;margin-left: 150px;" />
+									</td>
+								</tr>
+							</table>
+						</form>
+					</div><!--注册表单结束-->
+				</div>
+			</div><!--页面中间主体部分结束-->
+			
+			<!--页面底部-->
+			<div id="pageFooter">
+				<!--底部导航开始-->
+				<div id="footnav">
+					<ul class="footnavul">
+						<li class="footnavli">
+							<h4>关于我们</h4>
+							<ul class="footlist">
+								<li><span>&gt;</span><a href="#">发展历程</a></li>
+								<li><span>&gt;</span><a href="#">联系方式</a></li>
+								<li><span>&gt;</span><a href="#">公司介绍</a></li>
+								<li><span>&gt;</span><a href="#">企业文化</a></li>
+							</ul>
+						</li>
+						<li class="footnavli">
+							<h4>付款方式</h4>
+							<ul class="footlist">
+								<li><span>&gt;</span><a href="#">银行汇款</a></li>
+								<li><span>&gt;</span><a href="#">在线支付</a></li>
+								<li><span>&gt;</span><a href="#">货到付款</a></li>
+								<li><span>&gt;</span><a href="#">公司转账</a></li>
+							</ul>
+						</li>
+						<li class="footnavli">
+							<h4>送货方式</h4>
+							<ul class="footlist">
+								<li><span>&gt;</span><a href="#">上门自提</a></li>
+								<li><span>&gt;</span><a href="#">EMS快递</a></li>
+								<li><span>&gt;</span><a href="#">快递发货</a></li>
+								<li><span>&gt;</span><a href="#">平邮发货</a></li>
+							</ul>
+						</li>
+						<li class="footnavli">
+							<h4>售后服务</h4>
+							<ul class="footlist">
+								<li><span>&gt;</span><a href="#">质保承诺</a></li>
+								<li><span>&gt;</span><a href="#">退换货政策</a></li>
+								<li><span>&gt;</span><a href="#">价格保护</a></li>
+								<li><span>&gt;</span><a href="#">返修申请</a></li>
+							</ul>
+						</li>
+						<li class="footnavli">
+							<h4>购物帮助</h4>
+							<ul class="footlist">
+								<li><span>&gt;</span><a href="#">用户等级</a></li>
+								<li><span>&gt;</span><a href="#">积分获得与使用</a></li>
+								<li><span>&gt;</span><a href="#">购物流程</a></li>
+								<li><span>&gt;</span><a href="#">常见问题</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div><!--底部导航结束-->
+				
+				<!--底部信息-->
+				<div id="footInfo">
+					<p><a href="#">淘宝店</a><a href="#">易趣店</a><a href="#">拍拍店</a><a href="#">有啊店</a></p>
+					<p>Copyright 2015 <span>127.0.0.1. </span>All Rights Reserved 版权所有：广州网软志成信息科技有限公司</p>
+					<p>客户服务热线：020-34506590&nbsp;&nbsp;传真：020-34506590</p>
+					<p>客户服务邮箱：<span>webmaster@wrzc.net 粤ICP备06122404号&nbsp;管理进入</span></p>
+				</div><!--底部信息结束-->
+			</div><!--页面底部结束-->
+		</div><!--外部容器结束-->
+		
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.validate-1.13.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/getTime.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				var validate = $('#form').validate({
+//					debug:true,//调试模式，即使验证成功也不会跳转到目标页面
+					rules:{
+						username:{
+							required:true
+						},
+						password:{
+							required:true,
+							rangelength:[6,16]
+						},
+						relpassword:{
+							equalTo:"#password"
+						},
+						email:{
+							required:true,
+							email:true
+						}
+					},
+					
+					messages:{
+						username:{
+							required:'必须填写用户名'
+						},
+						password:{
+							required:'必须填写密码',
+							rangelength:'密码长度在6-16位之间'
+						},
+						relpassword:{
+							equalTo:"两次密码不同"
+						},
+						email:{
+							required:'必须填写邮箱',
+							email:'邮箱格式不对'
+						}
+					}
+				})
+			})
+		</script>
+	</body>
+</html>
+

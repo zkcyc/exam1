@@ -1,0 +1,111 @@
+#proShow{
+	margin: 15px auto;
+	width: 770px;
+	min-height: 300px;
+	border-bottom: 1px dashed #ccc;
+}
+#proShowleft{
+	float: left;
+	width: 290px;
+	border-right: 1px dotted #ccc;
+}
+#proShowleft #smallimg img{
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+	border: 1px solid #999;
+}
+#proShowright{
+	margin-left: 10px;
+	float: left;
+}
+#proShowright h4{
+	font-size: 15px;
+	color: #00267F;
+	padding-bottom: 10px;
+	border-bottom: 1px dotted #ccc;
+}
+#proShowright h4 span{
+	margin-left: 30px;
+}
+#proShowright h4 span,#proShowright h4 span a{
+	font-size: 10px;
+	color: #999;
+	font-weight: normal;
+}
+#proShowright p{
+	padding: 10px 0;
+	line-height: 24px;
+	font-size: 13px;
+	border-bottom: 1px dotted #ccc;
+}
+#proShowright p span{
+	color: #D6290B;
+	font-size: 13px;
+	margin-right: 10px;
+}
+#proShowright p a{
+	color: #666;
+}
+/*放大镜*/
+#bigShow{
+	position: absolute;
+	display: none;
+	top: 20px;
+	left: 0;
+	width: 300px;
+	height: 300px;
+	overflow: hidden;
+}
+
+#nextPro{
+	width: 770px;
+	min-height: 40px;
+	line-height: 40px;
+	border-bottom: 1px dashed #ccc;
+}
+#nextPro p{
+	float: left;
+	font-size: 14px;
+	font-weight: bold;
+}
+#nextPro p a{
+	text-decoration: none;
+	color: #666;
+	font-weight: normal;
+}
+#nextPro a{
+	float: right;
+}
+#prolist{
+	margin-top: 5px;
+}
+#prolist div{
+	text-align: center;
+	float: left;
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #ddd;
+	border-bottom: none;
+}
+#prolist div a{
+	text-decoration: none;
+	color: #111;
+	font-size: 14px;
+}
+#prolist div:hover a,#prolist div a.on{
+	color: #D6290B;
+	text-decoration: underline;
+	font-weight: bold;
+}
+#proInfo{
+	clear: both;
+	border: 1px solid #ccc;
+	padding: 10px 10px;
+	width: 770px;
+	height: 300px;
+}
+#proInfo p{
+	font-size: 14px;
+}

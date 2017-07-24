@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>麦子商城</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="css/productlist.css"/>
+		<link rel="stylesheet" type="text/css" href="css/productInfo.css"/>
+		<style type="text/css">
+			#pageMain{
+				min-height: 100px;
+			}
+			#pageMain_left{
+				min-height: 100px;
+			}
+			
+			#shoppinglist table tr{
+				height: 25px;
+				line-height: 25px;
+			}
+			#shoppinglist table tr td{
+				font-size: 14px;
+				color: #666;
+			}
+			.red{
+				color: #D6290B;
+				font-weight: bold;
+			}
+			#shoppinglist table tr:nth-child(2n+1){
+				background-color: #eff;
+			}
+		</style>
+	</head>
+	<body>
+		<!--外部容器-->
+		<div id="container" style="position: relative;">
+			<!--页面头部-->
+			<div id="pageTop">
+				<img src="img/logo.jpg"/>
+				<p>你好，欢迎来到麦子商城！想继续购物？<a href="login.html">【请登录】</a>，新用户？<a href="zuce.html">【免费注册】</a></p>
+				<div id="toplink">
+					<ul>
+						<li><a href="#">帮助中心</a>&nbsp;|</li>
+						<li><a href="#">客户反馈</a>&nbsp;|</li>
+						<li><a href="#">网站地图</a>&nbsp;|</li>
+						<li><a href="#">加入收藏</a></li>
+					</ul>
+				</div>
+				<div id="date"></div>
+				<div id="top_info"><marquee behavior="scroll" direction="up" scrolldelay="500"><a href="#">最新公告：明天有秒杀活动！</a></marquee></div>
+				<!--顶部导航-->
+				<div id="nav">
+					<ul>
+						<li><a href="index.html">网站首页</a></li>
+						<li><a href="#">分类导航</a></li>
+						<li><a href="#">品牌导航</a></li>
+						<li><a href="#">购物帮助</a></li>
+						<li><a href="#">新闻资讯</a></li>
+						<li><a href="#">报价单</a></li>
+						<li><a href="#">发货单</a></li>
+					</ul>
+				</div><!--顶部导航结束-->
+				
+				<!--顶部搜索和购物车-->
+				<div id="search" style="line-height: 34px;">
+					<p style="color: white;font-size: 14px;font-weight: bold;line-height: 34px;text-indent: 25px;">商品搜索：</p>
+					<select style="width: 100px;height: 20px;">
+						<option>所有分类</option><option>最新商品</option><option>热卖商品</option><option>折扣商品</option>
+					</select>
+					<form action="" style="display: inline-block;">
+						<input type="text" style="width: 260px; height: 17px;" />
+						<input type="button" value="搜索" style="width: 40px;height: 22px;" />
+					</form>
+					<span id="topsearch"><a href="#">高级/组合搜索</a></span>
+					<div id="search_right">
+						<p id="car"><a href="cart.html">购物车暂时为空</a></p>
+						<p id="jiesuan"><a href="jiesuan.html">去结算</a></p>
+						<p id="userCenter"><a href="#">用户中心</a></p>
+					</div>
+				</div><!--顶部搜索和购物车结束-->
+			</div><!--页面头部结束-->
+			
+			<!--页面中间主体部分-->
+			<div id="pageMain">
+				<!--左边-->
+				<div id="pageMain_left">
+					<div id="userbox">
+						<h3>用户信息</h3>
+						<ul>
+							<li style="background: url(img/1.gif) no-repeat;"><a href="#">欢迎cyc【退出】</a></li>
+							<li style="background: url(img/2.gif) no-repeat;"><a href="#">用户资料修改</a></li>
+							<li style="background: url(img/3.gif) no-repeat;"><a href="#">用户密码修改</a></li>
+							<li style="background: url(img/4.gif) no-repeat;"><a href="#">订单管理</a></li>
+							<li style="background: url(img/5.gif) no-repeat;"><a href="#">管理优惠券(0张)</a></li>
+							<li style="background: url(img/6.gif) no-repeat;"><a href="#">兑换优惠券</a></li>
+							<li style="background: url(img/7.gif) no-repeat;"><a href="#">缺货登记 登记记录</a></li>
+							<li style="background: url(img/8.gif) no-repeat;"><a href="cart.html">购物车（2）</a></li>
+							<li style="background: url(img/9.gif) no-repeat;"><a href="#">我的收藏（0）</a></li>
+							<li style="background: url(img/10.gif) no-repeat;"><a href="#">对比框（0）</a></li>
+						</ul>
+					</div>
+				</div><!--左边结束-->
+				
+				<!--右边开始-->
+				<div id="pro_right">
+					<!--您的位置-->
+					<div id="myaddress">
+						<span>您的位置：<a href="index.html">首页</a>&nbsp;&raquo;&nbsp;购物车</span>
+					</div><!--您的位置结束-->
+					
+					<div id="shoppinglist" style="text-align: left;">
+						<table id="shopTable" style="width: 100%;">
+							<tr>
+								<th>商品名称</th>
+								<th>单价(元)</th>
+								<th>数量</th>
+								<th>合计(元)</th>
+								<th>类型</th>
+								<th style="text-align: center;">操作</th>
+							</tr>
+							<tr>
+								<td style="width: 350px;">男式运动鞋 猫爪野外跑鞋2RMB313-1</td>
+								<td>￥<span class="price">528.00</span></td>
+								<td><input type="text" name="num" size="2" value="1" /></td>
+								<td>￥<span class="smalltotal">00.00</span></td>
+								<td>-</td>
+								<td style="text-align: center;"><input type="button" onclick="totalPrice()" value="更改数量" style="width: 80px;height: 20px;" />&nbsp;&nbsp;<input type="button"  value="取消定购" style="width: 80px;height: 20px;" onclick="removeRows(this)"/></td>
+							</tr>
+							<tr>
+								<td style="width: 350px;">美的(midea)电脑版电压力锅PCS507一锅双胆</td>
+								<td>￥<span class="price">389.00</span></td>
+								<td><input type="text" name="num" size="2" value="1" /></td>
+								<td>￥<span class="smalltotal">00.00</span></td>
+								<td>-</td>
+								<td style="text-align: center;"><input type="button" onclick="totalPrice()" value="更改数量" style="width: 80px;height: 20px;" />&nbsp;&nbsp;<input type="button" value="取消定购" style="width: 80px;height: 20px;" onclick="removeRows(this)"/></td>
+							</tr>
+							<tr>
+								<td style="width: 350px;">霍尼韦尔(Honeywell)</td>
+								<td>￥<span class="price">1298.00</span></td>
+								<td><input type="text" name="num" size="2" value="1" /></td>
+								<td>￥<span class="smalltotal">00.00</span></td>
+								<td>-</td>
+								<td style="text-align: center;"><input type="button" onclick="totalPrice()" value="更改数量" style="width: 80px;height: 20px;" />&nbsp;&nbsp;<input type="button" value="取消定购" style="width: 80px;height: 20px;" onclick="removeRows(this)"/></td>
+							</tr>
+						</table>
+						
+						<div style="float: right;font-size: 13px;margin: 3px 0;">
+							共&nbsp;<span class="red" id="count">2</span>&nbsp;件商品&nbsp;价格总计：<span class="red">￥<span id="total">917.00</span>元</span>
+							&nbsp;您是：<span style="color: #00267F;">一般会员</span>(不享受折扣价)
+						</div>
+						<div style="clear: both; float: right;font-size: 13px;margin: 3px 0;">
+							折后价格：<span class="red">￥<span id="endPrice">917.00</span>元</span>&nbsp;&nbsp;获得积分：<span id="jifen">917</span>分
+						</div>
+						<div style="clear: both; float: right;font-size: 12px;margin: 3px 0;">
+							满￥500元免运费
+						</div>
+						<div style="clear: both; float: right;font-size: 13px;margin: 3px 0;">
+							<input type="button" value="继续购物" style="width: 80px;height: 20px;" />&nbsp;&nbsp;<input type="button" value="现在结算" style="width: 80px;height: 20px;" />
+						</div>
+					</div>
+					
+				</div><!--右边结束-->
+			</div><!--页面中间主体部分结束-->
+			
+			<!--页面底部-->
+			<div id="pageFooter">
+				<!--底部导航开始-->
+				<div id="footnav">
+					<ul class="footnavul">
+						<li class="footnavli">
+							<h4>关于我们</h4>
+							<ul class="footlist">
+								<li><span>&gt;</span><a href="#">发展历程</a></li>
+								<li><span>&gt;</span><a href="#">联系方式</a></li>
+								<li><span>&gt;</span><a href="#">公司介绍</a></li>
+								<li><span>&gt;</span><a href="#">企业文化</a></li>
+							</ul>
+						</li>
+						<li class="footnavli">
+							<h4>付款方式</h4>
+							<ul class="footlist">
+								<li><span>&gt;</span><a href="#">银行汇款</a></li>
+								<li><span>&gt;</span><a href="#">在线支付</a></li>
+								<li><span>&gt;</span><a href="#">货到付款</a></li>
+								<li><span>&gt;</span><a href="#">公司转账</a></li>
+							</ul>
+						</li>
+						<li class="footnavli">
+							<h4>送货方式</h4>
+							<ul class="footlist">
+								<li><span>&gt;</span><a href="#">上门自提</a></li>
+								<li><span>&gt;</span><a href="#">EMS快递</a></li>
+								<li><span>&gt;</span><a href="#">快递发货</a></li>
+								<li><span>&gt;</span><a href="#">平邮发货</a></li>
+							</ul>
+						</li>
+						<li class="footnavli">
+							<h4>售后服务</h4>
+							<ul class="footlist">
+								<li><span>&gt;</span><a href="#">质保承诺</a></li>
+								<li><span>&gt;</span><a href="#">退换货政策</a></li>
+								<li><span>&gt;</span><a href="#">价格保护</a></li>
+								<li><span>&gt;</span><a href="#">返修申请</a></li>
+							</ul>
+						</li>
+						<li class="footnavli">
+							<h4>购物帮助</h4>
+							<ul class="footlist">
+								<li><span>&gt;</span><a href="#">用户等级</a></li>
+								<li><span>&gt;</span><a href="#">积分获得与使用</a></li>
+								<li><span>&gt;</span><a href="#">购物流程</a></li>
+								<li><span>&gt;</span><a href="#">常见问题</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div><!--底部导航结束-->
+				
+				<!--底部信息-->
+				<div id="footInfo">
+					<p><a href="#">淘宝店</a><a href="#">易趣店</a><a href="#">拍拍店</a><a href="#">有啊店</a></p>
+					<p>Copyright 2015 <span>127.0.0.1. </span>All Rights Reserved 版权所有：广州网软志成信息科技有限公司</p>
+					<p>客户服务热线：020-34506590&nbsp;&nbsp;传真：020-34506590</p>
+					<p>客户服务邮箱：<span>webmaster@wrzc.net 粤ICP备06122404号&nbsp;管理进入</span></p>
+				</div><!--底部信息结束-->
+			</div><!--页面底部结束-->
+		</div><!--外部容器结束-->
+		
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/getTime.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				totalPrice();
+			})
+			
+			function totalPrice(){
+				$('#shopTable .price').each(function(){
+					var price = $(this).text();
+					var num = $(this).parent().parent().children('td').find('input').val();
+					$(this).parent().parent().children('td').find('.smalltotal').text(price*num);
+				})
+				var total = 0.00;
+				var rows = 0;
+				$('#shopTable .smalltotal').each(function(){
+					total = total + parseFloat($(this).text());
+					rows++;
+					$('#count').text(rows);
+					$('#total').text(total);
+					$('#jifen').text(total);
+					$('#endPrice').text(total);
+				})
+			}
+			
+			function removeRows(row){
+				$(row).parent().parent().remove();
+				if($(row).parent().children('tr').length==0){
+					$('#count').text('0');
+					$('#total').text('00.00');
+					$('#jifen').text('0');
+					$('#endPrice').text('00.00');
+				}
+				totalPrice();
+			}
+		</script>
+	</body>
+</html>
+

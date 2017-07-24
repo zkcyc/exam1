@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>麦子商城</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="css/productlist.css"/>
+	</head>
+	<body>
+		<!--外部容器-->
+		<div id="container" style="position: relative;">
+			<!--页面头部-->
+			<div id="pageTop">
+				<img src="img/logo.jpg"/>
+				<p>你好，欢迎来到麦子商城！想继续购物？<a href="login.html">【请登录】</a>，新用户？<a href="zuce.html">【免费注册】</a></p>
+				<div id="toplink">
+					<ul>
+						<li><a href="#">帮助中心</a>&nbsp;|</li>
+						<li><a href="#">客户反馈</a>&nbsp;|</li>
+						<li><a href="#">网站地图</a>&nbsp;|</li>
+						<li><a href="#">加入收藏</a></li>
+					</ul>
+				</div>
+				<div id="date"></div>
+				<div id="top_info"><marquee behavior="scroll" direction="up" scrolldelay="500"><a href="#">最新公告：明天有秒杀活动！</a></marquee></div>
+				<!--顶部导航-->
+				<div id="nav">
+					<ul>
+						<li><a href="index.html">网站首页</a></li>
+						<li><a href="#">分类导航</a></li>
+						<li><a href="#">品牌导航</a></li>
+						<li><a href="#">购物帮助</a></li>
+						<li><a href="#">新闻资讯</a></li>
+						<li><a href="#">报价单</a></li>
+						<li><a href="#">发货单</a></li>
+					</ul>
+				</div><!--顶部导航结束-->
+				
+				<!--顶部搜索和购物车-->
+				<div id="search" style="line-height: 34px;">
+					<p style="color: white;font-size: 14px;font-weight: bold;line-height: 34px;text-indent: 25px;">商品搜索：</p>
+					<select style="width: 100px;height: 20px;">
+						<option>所有分类</option><option>最新商品</option><option>热卖商品</option><option>折扣商品</option>
+					</select>
+					<form action="" style="display: inline-block;">
+						<input type="text" style="width: 260px; height: 17px;" />
+						<input type="button" value="搜索" style="width: 40px;height: 22px;" />
+					</form>
+					<span id="topsearch"><a href="#">高级/组合搜索</a></span>
+					<div id="search_right">
+						<p id="car"><a href="cart.html">购物车暂时为空</a></p>
+						<p id="jiesuan"><a href="jiesuan.html">去结算</a></p>
+						<p id="userCenter"><a href="#">用户中心</a></p>
+					</div>
+				</div><!--顶部搜索和购物车结束-->
+			</div><!--页面头部结束-->
+			
+			<!--页面中间主体部分-->
+			<div id="pageMain">
+				<!--左边-->
+				<div id="pageMain_left">
+					<div id="userbox">
+						<h3>用户信息</h3>
+						<ul>
+							<li style="background: url(img/1.gif) no-repeat;"><a href="#">欢迎cyc【退出】</a></li>
+							<li style="background: url(img/2.gif) no-repeat;"><a href="#">用户资料修改</a></li>
+							<li style="background: url(img/3.gif) no-repeat;"><a href="#">用户密码修改</a></li>
+							<li style="background: url(img/4.gif) no-repeat;"><a href="#">订单管理</a></li>
+							<li style="background: url(img/5.gif) no-repeat;"><a href="#">管理优惠券(0张)</a></li>
+							<li style="background: url(img/6.gif) no-repeat;"><a href="#">兑换优惠券</a></li>
+							<li style="background: url(img/7.gif) no-repeat;"><a href="#">缺货登记 登记记录</a></li>
+							<li style="background: url(img/8.gif) no-repeat;"><a href="#">购物车（2）</a></li>
+							<li style="background: url(img/9.gif) no-repeat;"><a href="#">我的收藏（0）</a></li>
+							<li style="background: url(img/10.gif) no-repeat;"><a href="#">对比框（0）</a></li>
+						</ul>
+					</div>
+					
+					<div id="productbox">
+						<h3>商品分类</h3>
+						<div style="border-bottom: 1px solid #E34542;border-right: 1px solid #E34542;border-left: 1px solid #E34542;">
+							<div class="product">
+								<h4>&gt;家用电器</h4>
+								<ul>
+									<li><a href="#">大家电</a></li>&nbsp;|
+									<li><a href="#">厨房电器</a></li>
+								</ul>
+								<ul>
+									<li><a href="#">汽车用品</a></li>&nbsp;|
+									<li><a href="#">个人护理</a></li>
+								</ul>
+								<ul>
+									<li><a href="#">生活电器</a></li>&nbsp;|
+									<li><a href="#">其他家电</a></li>
+								</ul>
+							</div>
+							<div class="product">
+								<h4>&gt;手机数码</h4>
+								<ul>
+									<li><a href="#">数码相机</a></li>&nbsp;|
+									<li><a href="#">手机通讯</a></li>
+								</ul>
+								<ul>
+									<li><a href="#">时尚影音</a></li>&nbsp;|
+									<li><a href="#">数码配件</a></li>
+								</ul>
+								<ul>
+									<li><a href="#">数码影像</a></li>&nbsp;|
+									<li><a href="#">手机配件</a></li>
+								</ul>
+							</div>
+							<div class="product">
+								<h4>&gt;电脑产品</h4>
+								<ul>
+									<li><a href="#">笔记本</a></li>&nbsp;|
+									<li><a href="#">办公耗材</a></li>
+								</ul>
+								<ul>
+									<li><a href="#">电脑软件</a></li>&nbsp;|
+									<li><a href="#">网络产品</a></li>
+								</ul>
+								<ul>
+									<li><a href="#">办公设备</a></li>&nbsp;|
+									<li><a href="#">电脑整机</a></li>
+								</ul>
+							</div>
+							<div class="product">
+								<h4>&gt;日用百货</h4>
+								<ul>
+									<li><a href="#">玩具乐器</a></li>&nbsp;|
+									<li><a href="#">个护化妆</a></li>
+								</ul>
+								<ul>
+									<li><a href="#">礼品箱包</a></li>&nbsp;|
+									<li><a href="#">钟表首饰</a></li>
+								</ul>
+							</div>
+							<div class="product">
+								<h4>&gt;服装鞋帽</h4>
+								<ul>
+									<li><a href="#">运动鞋</a></li>&nbsp;|
+									<li><a href="#">女士服装</a></li>
+								</ul>
+								<ul><li><a href="#">男士服装</a></li>&nbsp;|
+									<li><a href="#">运动装</a></li>
+								</ul>
+							</div>
+							<div class="product">
+								<h4>&gt;运动健康</h4>
+								<ul>
+									<li><a href="#">户外运动</a></li>&nbsp;|
+									<li><a href="#">运动器材</a></li>
+								</ul>
+								<ul>
+									<li><a href="#">养生器械</a></li>&nbsp;|
+									<li><a href="#">健康食品</a></li>
+								</ul>
+							</div>
+							<div id="product_other"><a href="#">所有分类&raquo;</a></div>
+						</div>
+					</div><!--productbox结束-->
+					<!--推荐品牌开始-->
+					
+					<!--分类商品推荐-->
+					<div id="protype" class="newsbox">
+						<h3>分类商品推荐</h3>
+							<ul style="border: 1px solid #E34542;border-top: none;">
+								<li style="width: 60px;"><img src="productImg/5.png" width="50px" height="50px"/></li>
+								<li style="width: 110px;"><a href="#">创维(Skyworth) 32英寸液晶电视32L05HR(内置底座)<br/></a>
+									<span style="font-weight: bold;color: #D6290B;">￥2599.00元</span>
+								</li>
+							</ul>
+					</div><!--分类商品推荐结束-->
+				</div><!--左边结束-->
+				
+				<!--右边开始-->
+				<div id="pro_right">
+					<!--您的位置-->
+					<div id="myaddress">
+						<span>您的位置：<a href="index.html">首页</a>&nbsp;&raquo;&nbsp;家用电器（共3件商品，这是第1-3件）</span>
+					</div><!--您的位置结束-->
+					
+					<!--子类列表-->
+					<div id="childlist">
+						<span>子类列表：</span>
+						<span>
+							<a href="#">大家电</a>
+							<a href="#">厨房电器</a>
+							<a href="#">汽车用品</a>
+							<a href="#">个人护理</a>
+							<a href="#">生活电器</a>
+							<a href="#">其他家电</a>
+						</span>
+					</div><!--子类列表结束-->
+					
+					<!--产品盒子-->
+					<div id="probox">
+						<!--排序开始-->
+						<div id="paixu">
+							<span>排序:
+								<a href="#">网站推荐</a>
+								<a href="#">销量</a>
+								<a href="#">价格&dagger;</a>
+								<a href="#">价格&darr;</a>
+								<a href="#">浏览量</a>
+								<a href="#">上架时间</a>
+							</span>
+						</div><!--排序结束-->
+						
+						<!--产品开始-->
+						<div class="pro">
+							<div class="pro_left">
+								<img src="productImg/1.png" width="100px" height="100px" />
+							</div>
+							<div class="pro_right">
+								<p style="font-size: 14px;line-height: 26px;margin-top: 20px;">
+									<span style="color: #FBA619;">&gt;</span>霍尼韦尔(Honeywell)5010-CHN空气净化器<br />
+									市场价:<span style="text-decoration: line-through;">1998.00元</span>
+									<span style="color: #FBA619;font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;会员价</span><em style="color: #FBA619;font-weight: bold;">￥1298.00元</em>
+									&nbsp;&nbsp;&nbsp;&nbsp;节省：￥700.00元
+								</p>
+								<p style="margin-top: 30px;margin-right: 20px;float: right;">
+									<a href="#"><img src="productImg/buy.gif"/></a>
+									<a href="#"><img src="productImg/duibi.gif"/></a>
+									<a href="#"><img src="productImg/shoucang.gif"/></a>
+								</p>
+							</div>
+						</div>
+							
+						<div class="pro">
+							<div class="pro_left">
+								<img src="productImg/1.png" width="100px" height="100px" />
+							</div>
+							<div class="pro_right">
+								<p style="font-size: 14px;line-height: 26px;margin-top: 20px;">
+									<span style="color: #FBA619;">&gt;</span>霍尼韦尔(Honeywell)5010-CHN空气净化器<br />
+									市场价:<span style="text-decoration: line-through;">1998.00元</span>
+									<span style="color: #FBA619;font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;会员价</span><em style="color: #FBA619;font-weight: bold;">￥1298.00元</em>
+									&nbsp;&nbsp;&nbsp;&nbsp;节省：￥700.00元
+								</p>
+								<p style="margin-top: 30px;margin-right: 20px;float: right;">
+									<a href="#"><img src="productImg/buy.gif"/></a>
+									<a href="#"><img src="productImg/duibi.gif"/></a>
+									<a href="#"><img src="productImg/shoucang.gif"/></a>
+								</p>
+							</div>
+						</div>
+						
+						<div class="pro">
+							<div class="pro_left">
+								<img src="productImg/1.png" width="100px" height="100px" />
+							</div>
+							<div class="pro_right">
+								<p style="font-size: 14px;line-height: 26px;margin-top: 20px;">
+									<span style="color: #FBA619;">&gt;</span>霍尼韦尔(Honeywell)5010-CHN空气净化器<br />
+									市场价:<span style="text-decoration: line-through;">1998.00元</span>
+									<span style="color: #FBA619;font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;会员价</span><em style="color: #FBA619;font-weight: bold;">￥1298.00元</em>
+									&nbsp;&nbsp;&nbsp;&nbsp;节省：￥700.00元
+								</p>
+								<p style="margin-top: 30px;margin-right: 20px;float: right;">
+									<a href="#"><img src="productImg/buy.gif"/></a>
+									<a href="#"><img src="productImg/duibi.gif"/></a>
+									<a href="#"><img src="productImg/shoucang.gif"/></a>
+								</p>
+							</div>
+						</div>
+						
+						<!--产品结束-->
+					</div><!--产品盒子结束-->
+				</div><!--右边开始-->
+			</div><!--页面中间主体部分结束-->
+			
+			<!--页面底部-->
+			<div id="pageFooter">
+				<!--底部导航开始-->
+				<div id="footnav">
+					<ul class="footnavul">
+						<li class="footnavli">
+							<h4>关于我们</h4>
+							<ul class="footlist">
+								<li><span>&gt;</span><a href="#">发展历程</a></li>
+								<li><span>&gt;</span><a href="#">联系方式</a></li>
+								<li><span>&gt;</span><a href="#">公司介绍</a></li>
+								<li><span>&gt;</span><a href="#">企业文化</a></li>
+							</ul>
+						</li>
+						<li class="footnavli">
+							<h4>付款方式</h4>
+							<ul class="footlist">
+								<li><span>&gt;</span><a href="#">银行汇款</a></li>
+								<li><span>&gt;</span><a href="#">在线支付</a></li>
+								<li><span>&gt;</span><a href="#">货到付款</a></li>
+								<li><span>&gt;</span><a href="#">公司转账</a></li>
+							</ul>
+						</li>
+						<li class="footnavli">
+							<h4>送货方式</h4>
+							<ul class="footlist">
+								<li><span>&gt;</span><a href="#">上门自提</a></li>
+								<li><span>&gt;</span><a href="#">EMS快递</a></li>
+								<li><span>&gt;</span><a href="#">快递发货</a></li>
+								<li><span>&gt;</span><a href="#">平邮发货</a></li>
+							</ul>
+						</li>
+						<li class="footnavli">
+							<h4>售后服务</h4>
+							<ul class="footlist">
+								<li><span>&gt;</span><a href="#">质保承诺</a></li>
+								<li><span>&gt;</span><a href="#">退换货政策</a></li>
+								<li><span>&gt;</span><a href="#">价格保护</a></li>
+								<li><span>&gt;</span><a href="#">返修申请</a></li>
+							</ul>
+						</li>
+						<li class="footnavli">
+							<h4>购物帮助</h4>
+							<ul class="footlist">
+								<li><span>&gt;</span><a href="#">用户等级</a></li>
+								<li><span>&gt;</span><a href="#">积分获得与使用</a></li>
+								<li><span>&gt;</span><a href="#">购物流程</a></li>
+								<li><span>&gt;</span><a href="#">常见问题</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div><!--底部导航结束-->
+				
+				<!--底部信息-->
+				<div id="footInfo">
+					<p><a href="#">淘宝店</a><a href="#">易趣店</a><a href="#">拍拍店</a><a href="#">有啊店</a></p>
+					<p>Copyright 2015 <span>127.0.0.1. </span>All Rights Reserved 版权所有：广州网软志成信息科技有限公司</p>
+					<p>客户服务热线：020-34506590&nbsp;&nbsp;传真：020-34506590</p>
+					<p>客户服务邮箱：<span>webmaster@wrzc.net 粤ICP备06122404号&nbsp;管理进入</span></p>
+				</div><!--底部信息结束-->
+			</div><!--页面底部结束-->
+		</div><!--外部容器结束-->
+		
+		<script src="js/getTime.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
+

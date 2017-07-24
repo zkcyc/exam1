@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>麦子商城</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="css/productlist.css"/>
+		<link rel="stylesheet" type="text/css" href="css/productInfo.css"/>
+		<script type="text/javascript">
+			function changeImg(){
+				var bigImg = document.getElementById('bigimgbox');
+				bigImg.src = event.srcElement.src;
+				
+			}
+			function displayobj(id){
+				var obj = document.getElementById(id);
+				obj.style.display = 'block';
+			}
+			function hiddenobj(id){
+				var obj = document.getElementById(id);
+				obj.style.display = 'none';
+			}
+			function sendImg(){
+				var bigShowImg = document.getElementById('bigShowImg');
+				bigShowImg.src = event.srcElement.src;
+			}
+			function Mmove(){
+				displayobj('bigShow');
+				sendImg();
+				var bigShowImg = document.getElementById('bigShowImg');
+				var bigShow = document.getElementById('bigShow');
+				//得到原图和大图的比例
+				var offx = bigShowImg.width/event.srcElement.width;
+				var offy = bigShowImg.height/event.srcElement.height;
+				bigShow.scrollLeft =  event.offsetX*offx;
+				bigShow.scrollTop = event.offsetY*offy;
+				
+			}
+			function Mout(){
+				hiddenobj('bigShow');
+			}
+			
+			//商品选项卡功能
+			function listin(num){
+				for(var i = 1;i<=5;i++){
+					if(i==num){
+						var obj = document.getElementById('info'+num);
+						obj.style.display = 'block';
+						document.getElementById('prolist').getElementsByTagName('a')[num-1].className = 'on';
+					}else{
+						var obj = document.getElementById('info'+i);
+						obj.style.display = 'none';
+						document.getElementById('prolist').getElementsByTagName('a')[i-1].className = '';
+					}
+				}
+			}
+			
+			
+			
+		</script>
+	</head>
+	<body>
+		<!--外部容器-->
+		<div id="container" style="position: relative;">
+			<!--页面头部-->
+			<div id="pageTop">
+				<img src="img/logo.jpg"/>
+				<p>你好，欢迎来到麦子商城！想继续购物？<a href="login.html">【请登录】</a>，新用户？<a href="zuce.html">【免费注册】</a></p>
+				<div id="toplink">
+					<ul>
+						<li><a href="#">帮助中心</a>&nbsp;|</li>
+						<li><a href="#">客户反馈</a>&nbsp;|</li>
+						<li><a href="#">网站地图</a>&nbsp;|</li>
+						<li><a href="#">加入收藏</a></li>
+					</ul>
+				</div>
+				<div id="date"></div>
+				<div id="top_info"><marquee behavior="scroll" direction="up" scrolldelay="500"><a href="#">最新公告：明天有秒杀活动！</a></marquee></div>
+				<!--顶部导航-->
+				<div id="nav">
+					<ul>
+						<li><a href="index.html">网站首页</a></li>
+						<li><a href="#">分类导航</a></li>
+						<li><a href="#">品牌导航</a></li>
+						<li><a href="#">购物帮助</a></li>
+						<li><a href="#">新闻资讯</a></li>
+						<li><a href="#">报价单</a></li>
+						<li><a href="#">发货单</a></li>
+					</ul>
+				</div><!--顶部导航结束-->
+				
+				<!--顶部搜索和购物车-->
+				<div id="search" style="line-height: 34px;">
+					<p style="color: white;font-size: 14px;font-weight: bold;line-height: 34px;text-indent: 25px;">商品搜索：</p>
+					<select style="width: 100px;height: 20px;">
+						<option>所有分类</option><option>最新商品</option><option>热卖商品</option><option>折扣商品</option>
+					</select>
+					<form action="" style="display: inline-block;">
+						<input type="text" style="width: 260px; height: 17px;" />
+						<input type="button" value="搜索" style="width: 40px;height: 22px;" />
+					</form>
+					<span id="topsearch"><a href="#">高级/组合搜索</a></span>
+					<div id="search_right">
+						<p id="car"><a href="cart.html">购物车暂时为空</a></p>
+						<p id="jiesuan"><a href="jiesuan.html">去结算</a></p>
+						<p id="userCenter"><a href="#">用户中心</a></p>
+					</div>
+				</div><!--顶部搜索和购物车结束-->
+			</div><!--页面头部结束-->
+			
+			<!--页面中间主体部分-->
+			<div id="pageMain">
+				<!--左边-->
+				<div id="pageMain_left">
+					<div id="userbox">
+						<h3>用户信息</h3>
+						<ul>
+							<li style="background: url(img/1.gif) no-repeat;"><a href="#">注册/登陆</a></li>
+							<li style="background: url(img/8.gif) no-repeat;"><a href="#">购物车（0）</a></li>
+							<li style="background: url(img/10.gif) no-repeat;"><a href="#">对比框（0）</a></li>
+						</ul>
+					</div>
+					
+					<!--最近浏览商品-->
+					<div id="protype" class="newsbox">
+						<h3>最近浏览商品</h3>
+							<ul style="border: 1px solid #E34542;border-top: none;">
+								<li style="width: 60px;"><img src="productImg/5.png" width="50px" height="50px"/></li>
+								<li style="width: 110px;"><a href="#">创维(Skyworth) 32英寸液晶电视32L05HR(内置底座)<br/></a>
+									<span style="font-weight: bold;color: #D6290B;">￥2599.00元</span>
+								</li>
+							</ul>
+					</div><!--最近浏览商品结束-->
+					
+					<div id="productbox">
+						<h3>商品分类</h3>
+						<div style="border-bottom: 1px solid #E34542;border-right: 1px solid #E34542;border-left: 1px solid #E34542;">
+							<div class="product">
+								<h4>&gt;家用电器</h4>
+								<ul>
+									<li><a href="#">大家电</a></li>&nbsp;|
+									<li><a href="#">厨房电器</a></li>
+								</ul>
+								<ul>
+									<li><a href="#">汽车用品</a></li>&nbsp;|
+									<li><a href="#">个人护理</a></li>
+								</ul>
+								<ul>
+									<li><a href="#">生活电器</a></li>&nbsp;|
+									<li><a href="#">其他家电</a></li>
+								</ul>
+							</div>
+							<div class="product">
+								<h4>&gt;手机数码</h4>
+								<ul>
+									<li><a href="#">数码相机</a></li>&nbsp;|
+									<li><a href="#">手机通讯</a></li>
+								</ul>
+								<ul>
+									<li><a href="#">时尚影音</a></li>&nbsp;|
+									<li><a href="#">数码配件</a></li>
+								</ul>
+								<ul>
+									<li><a href="#">数码影像</a></li>&nbsp;|
+									<li><a href="#">手机配件</a></li>
+								</ul>
+							</div>
+							<div class="product">
+								<h4>&gt;电脑产品</h4>
+								<ul>
+									<li><a href="#">笔记本</a></li>&nbsp;|
+									<li><a href="#">办公耗材</a></li>
+								</ul>
+								<ul>
+									<li><a href="#">电脑软件</a></li>&nbsp;|
+									<li><a href="#">网络产品</a></li>
+								</ul>
+								<ul>
+									<li><a href="#">办公设备</a></li>&nbsp;|
+									<li><a href="#">电脑整机</a></li>
+								</ul>
+							</div>
+							<div class="product">
+								<h4>&gt;日用百货</h4>
+								<ul>
+									<li><a href="#">玩具乐器</a></li>&nbsp;|
+									<li><a href="#">个护化妆</a></li>
+								</ul>
+								<ul>
+									<li><a href="#">礼品箱包</a></li>&nbsp;|
+									<li><a href="#">钟表首饰</a></li>
+								</ul>
+							</div>
+							<div class="product">
+								<h4>&gt;服装鞋帽</h4>
+								<ul>
+									<li><a href="#">运动鞋</a></li>&nbsp;|
+									<li><a href="#">女士服装</a></li>
+								</ul>
+								<ul><li><a href="#">男士服装</a></li>&nbsp;|
+									<li><a href="#">运动装</a></li>
+								</ul>
+							</div>
+							<div class="product">
+								<h4>&gt;运动健康</h4>
+								<ul>
+									<li><a href="#">户外运动</a></li>&nbsp;|
+									<li><a href="#">运动器材</a></li>
+								</ul>
+								<ul>
+									<li><a href="#">养生器械</a></li>&nbsp;|
+									<li><a href="#">健康食品</a></li>
+								</ul>
+							</div>
+							<div id="product_other"><a href="#">所有分类&raquo;</a></div>
+						</div>
+					</div><!--productbox结束-->
+					
+				</div><!--左边结束-->
+				
+				<!--右边开始-->
+				<div id="pro_right">
+					<!--您的位置-->
+					<div id="myaddress">
+						<span>您的位置：<a href="index.html">首页</a>&nbsp;&raquo;&nbsp;<a href="#">家用电器</a>
+							&nbsp;&raquo;&nbsp;<a href="#">生活电器</a>&nbsp;&raquo;&nbsp;霍尼韦尔(Honeywell)5010-CHN空气净化器
+						</span>
+					</div><!--您的位置结束-->
+					
+					<!--商品展示-->
+					<div id="proShow">
+						<div id="proShowleft">
+							<div id="bigimg" onmousemove="Mmove()" onmouseout=" Mout()">
+								<img id="bigimgbox" src="productImg/p5.jpg" width="280px" height="225px"/>
+							</div>
+							<div id="smallimg">
+								<img src="productImg/p5.jpg" onmousemove="changeImg();sendImg()"/>
+								<img src="productImg/p1.jpg" onmousemove="changeImg();sendImg()"/>
+								<img src="productImg/p2.jpg" onmousemove="changeImg();sendImg()"/>
+								<img src="productImg/p3.jpg" onmousemove="changeImg();sendImg()"/>
+								<img src="productImg/p4.jpg" onmousemove="changeImg();sendImg()"/>
+							</div>
+						</div>
+						<div id="proShowright" style="position: relative;">
+							<h4>霍尼韦尔(Honeywell)5010-CHN空气净化器&nbsp;&nbsp;&nbsp;<span>(<a href="#">0篇用户评论</a>|<a href="#">写评论</a>)</span></h4>
+							<p>商品编号：10042710521400<br/>商品积分：<span>1298</span><a href="#">(积分可兑换优惠券)</a></p>
+							<p><span style="color: #666;">市场价格：<span style="text-decoration: line-through;color: #666;">￥1998.00元</span></span><br />
+								本站价格：<span>￥1298.00元<br /></span>
+								为您节省：<span>￥700.00元<br /></span>
+								订购数量：<input type="text" style="width: 50px;" />
+							</p>
+							<div style="padding-top: 10px;">
+								<a href="#"><img src="productImg/buy.gif" /></a>
+								<a href="#"><img src="productImg/duibi.gif"/></a>
+								<a href="#"><img src="productImg/shoucang.gif"/></a>
+							</div>
+							
+							<!--放大镜-->
+							<div id="bigShow">
+								<img id="bigShowImg" src="" width="600px" height="600px"/>
+							</div><!--放大镜结束-->
+						</div>
+					</div><!--商品展示结束-->
+					
+					<!--下一个商品-->
+					<div id="nextPro">
+						<p>下一个商品：<a href="#">美的(midea)电脑版电压力锅PCS507一锅双胆</a></p>
+						<a href="#"><img src="payImg/alipay_buy.gif"/></a>
+						<a href="#"><img src="payImg/paypal_buy.gif"/></a>
+					</div><!--下一个商品结束-->
+					
+					<!--商品信息-->
+					<div id="proMsg">
+						<div id="prolist">
+							<div onmouseover="listin(1)"><a href="#" class="on">详细说明</a></div>
+							<div onmouseover="listin(2)"><a href="#">相关产品</a></div>
+							<div onmouseover="listin(3)"><a href="#">商品评论</a></div>
+							<div onmouseover="listin(4)"><a href="#">付款方式</a></div>
+							<div onmouseover="listin(5)"><a href="#">送货方式</a></div>
+						</div>
+						<div id="proInfo">
+							<p id="info1">颜色分类: 下三杆 黑色 下三杆 蓝色 下三杆 灰色 束脚2杆 黑色款号: 10000品牌: other/其他上市时间: 2016年春季吊牌价:
+								 00裤门襟: 松紧面料材质: 其他服装款式细节: 字母 刺绣运动户外项目: 运动休闲功能: 吸湿排汗 速干 透气性别: 
+								 男尺码: L（95/110斤） M（80/90斤） XL（110/135斤) XXL(135/150斤）运动系列: 运动生活
+							</p>
+							<p id="info2" style="display: none;">划线价格指商品的专柜价、吊牌价、正品零售价、厂商指导价或该商品的曾经展示过的销售价等，并非原价，仅供参考。
+								未划线价格指商品的实时标价，不因表述的差异改变性质。具体成交价格根据
+								商品参加活动，或会员使用优惠券、积分等发生变化，最终以订单结算页价格为准。
+								此说明仅当出现价格比较时有效，具体请参见《淘宝价格发布规范》。若商家单独对划线价格进行说明的，以商家的表述为准。
+							</p>
+							<p id="info3" style="display: none;">颜色分类: 下三杆 黑色 下三杆 蓝色 下三杆 灰色 束脚2杆 黑色款号: 10000品牌: other/其他上市时间: 2016年春季吊牌价:
+								 00裤门襟: 松紧面料材质: 其他服装款式细节: 字母 刺绣运动户外项目: 运动休闲功能: 吸湿排汗 速干 透气性别: 
+								 男尺码: L（95/110斤） M（80/90斤） XL（110/135斤) XXL(135/150斤）运动系列: 运动生活
+							</p>
+							<p id="info4" style="display: none;">圣诞节卡和大家圣诞节卡和大家圣诞节卡和大家圣诞节卡和大家圣诞节卡和大家圣诞节卡和大家圣诞节卡和大家
+								圣诞节卡和大家圣诞节卡和大家圣诞节卡和大家圣诞节卡和大家圣诞节卡和大家圣诞节卡和大家圣诞节卡和大家圣诞节卡和大家圣诞节卡和大家圣诞节卡和大家圣诞节卡和大家
+								圣诞节卡和大家圣诞节卡和大家圣诞节卡和大家圣诞节卡和大家圣诞节卡和大家圣诞节卡和大家圣诞节卡和大家圣诞节卡和大家
+							</p>
+							<p id="info5" style="display: none;">划线价格指商品的专柜价、吊牌价、正品零售价、厂商指导价或该商品的曾经展示过的销售价等，并非原价，仅供参考。
+								未划线价格指商品的实时标价，不因表述的差异改变性质。具体成交价格根据
+								商品参加活动，或会员使用优惠券、积分等发生变化，最终以订单结算页价格为准。
+								此说明仅当出现价格比较时有效，具体请参见《淘宝价格发布规范》。若商家单独对划线价格进行说明的，以商家的表述为准。
+							</p>
+						</div>
+					</div><!--商品信息结束-->
+				</div><!--右边开始-->
+			</div><!--页面中间主体部分结束-->
+			
+			<!--页面底部-->
+			<div id="pageFooter">
+				<!--底部导航开始-->
+				<div id="footnav">
+					<ul class="footnavul">
+						<li class="footnavli">
+							<h4>关于我们</h4>
+							<ul class="footlist">
+								<li><span>&gt;</span><a href="#">发展历程</a></li>
+								<li><span>&gt;</span><a href="#">联系方式</a></li>
+								<li><span>&gt;</span><a href="#">公司介绍</a></li>
+								<li><span>&gt;</span><a href="#">企业文化</a></li>
+							</ul>
+						</li>
+						<li class="footnavli">
+							<h4>付款方式</h4>
+							<ul class="footlist">
+								<li><span>&gt;</span><a href="#">银行汇款</a></li>
+								<li><span>&gt;</span><a href="#">在线支付</a></li>
+								<li><span>&gt;</span><a href="#">货到付款</a></li>
+								<li><span>&gt;</span><a href="#">公司转账</a></li>
+							</ul>
+						</li>
+						<li class="footnavli">
+							<h4>送货方式</h4>
+							<ul class="footlist">
+								<li><span>&gt;</span><a href="#">上门自提</a></li>
+								<li><span>&gt;</span><a href="#">EMS快递</a></li>
+								<li><span>&gt;</span><a href="#">快递发货</a></li>
+								<li><span>&gt;</span><a href="#">平邮发货</a></li>
+							</ul>
+						</li>
+						<li class="footnavli">
+							<h4>售后服务</h4>
+							<ul class="footlist">
+								<li><span>&gt;</span><a href="#">质保承诺</a></li>
+								<li><span>&gt;</span><a href="#">退换货政策</a></li>
+								<li><span>&gt;</span><a href="#">价格保护</a></li>
+								<li><span>&gt;</span><a href="#">返修申请</a></li>
+							</ul>
+						</li>
+						<li class="footnavli">
+							<h4>购物帮助</h4>
+							<ul class="footlist">
+								<li><span>&gt;</span><a href="#">用户等级</a></li>
+								<li><span>&gt;</span><a href="#">积分获得与使用</a></li>
+								<li><span>&gt;</span><a href="#">购物流程</a></li>
+								<li><span>&gt;</span><a href="#">常见问题</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div><!--底部导航结束-->
+				
+				<!--底部信息-->
+				<div id="footInfo">
+					<p><a href="#">淘宝店</a><a href="#">易趣店</a><a href="#">拍拍店</a><a href="#">有啊店</a></p>
+					<p>Copyright 2015 <span>127.0.0.1. </span>All Rights Reserved 版权所有：广州网软志成信息科技有限公司</p>
+					<p>客户服务热线：020-34506590&nbsp;&nbsp;传真：020-34506590</p>
+					<p>客户服务邮箱：<span>webmaster@wrzc.net 粤ICP备06122404号&nbsp;管理进入</span></p>
+				</div><!--底部信息结束-->
+			</div><!--页面底部结束-->
+		</div><!--外部容器结束-->
+		
+		<script src="js/getTime.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
+

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>麦子商城</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="css/productlist.css"/>
+		<link rel="stylesheet" type="text/css" href="css/productInfo.css"/>
+		<style type="text/css">
+			#pageMain{
+				min-height: 100px;
+			}
+			#pageMain_left{
+				min-height: 100px;
+			}
+			
+			#shoppinglist table tr{
+				height: 25px;
+				line-height: 25px;
+			}
+			#shoppinglist table tr td{
+				font-size: 14px;
+				color: #666;
+			}
+			.red{
+				color: #D6290B;
+				font-weight: bold;
+			}
+			#shoppinglist table tr:nth-child(2n+1){
+				background-color: #eff;
+			}
+			
+			#end{
+				clear: both;
+				width: 100%;
+				min-height: 100px;
+				margin-top: 10px auto;
+			}
+			.usertitle{
+				font-size: 14px;
+				font-weight: bold;
+				text-indent: 120px;
+				background: url(img/copy_line.gif) repeat-x;
+			}
+			.usertitle img{
+				margin-right: 5px;
+			}
+			.usertable{
+				line-height: 30px;
+				margin-left: 100px;
+				font-size: 15px;
+			}
+			.usertable tr td{
+				font-size: 14px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--外部容器-->
+		<div id="container" style="position: relative;">
+			<!--页面头部-->
+			<div id="pageTop">
+				<img src="img/logo.jpg"/>
+				<p>你好，欢迎来到麦子商城！想继续购物？<a href="login.html">【请登录】</a>，新用户？<a href="zuce.html">【免费注册】</a></p>
+				<div id="toplink">
+					<ul>
+						<li><a href="#">帮助中心</a>&nbsp;|</li>
+						<li><a href="#">客户反馈</a>&nbsp;|</li>
+						<li><a href="#">网站地图</a>&nbsp;|</li>
+						<li><a href="#">加入收藏</a></li>
+					</ul>
+				</div>
+				<div id="date"></div>
+				<div id="top_info"><marquee behavior="scroll" direction="up" scrolldelay="500"><a href="#">最新公告：明天有秒杀活动！</a></marquee></div>
+				<!--顶部导航-->
+				<div id="nav">
+					<ul>
+						<li><a href="index.html">网站首页</a></li>
+						<li><a href="#">分类导航</a></li>
+						<li><a href="#">品牌导航</a></li>
+						<li><a href="#">购物帮助</a></li>
+						<li><a href="#">新闻资讯</a></li>
+						<li><a href="#">报价单</a></li>
+						<li><a href="#">发货单</a></li>
+					</ul>
+				</div><!--顶部导航结束-->
+				
+				<!--顶部搜索和购物车-->
+				<div id="search" style="line-height: 34px;">
+					<p style="color: white;font-size: 14px;font-weight: bold;line-height: 34px;text-indent: 25px;">商品搜索：</p>
+					<select style="width: 100px;height: 20px;">
+						<option>所有分类</option><option>最新商品</option><option>热卖商品</option><option>折扣商品</option>
+					</select>
+					<form action="" style="display: inline-block;">
+						<input type="text" style="width: 260px; height: 17px;" />
+						<input type="button" value="搜索" style="width: 40px;height: 22px;" />
+					</form>
+					<span id="topsearch"><a href="#">高级/组合搜索</a></span>
+					<div id="search_right">
+						<p id="car"><a href="cart.html">购物车暂时为空</a></p>
+						<p id="jiesuan"><a href="jiesuan.html">去结算</a></p>
+						<p id="userCenter"><a href="#">用户中心</a></p>
+					</div>
+				</div><!--顶部搜索和购物车结束-->
+			</div><!--页面头部结束-->
+			
+			<!--页面中间主体部分-->
+			<div id="pageMain">
+				<!--左边-->
+				<div id="pageMain_left">
+					<div id="userbox">
+						<h3>用户信息</h3>
+						<ul>
+							<li style="background: url(img/1.gif) no-repeat;"><a href="#">欢迎cyc【退出】</a></li>
+							<li style="background: url(img/2.gif) no-repeat;"><a href="#">用户资料修改</a></li>
+							<li style="background: url(img/3.gif) no-repeat;"><a href="#">用户密码修改</a></li>
+							<li style="background: url(img/4.gif) no-repeat;"><a href="#">订单管理</a></li>
+							<li style="background: url(img/5.gif) no-repeat;"><a href="#">管理优惠券(0张)</a></li>
+							<li style="background: url(img/6.gif) no-repeat;"><a href="#">兑换优惠券</a></li>
+							<li style="background: url(img/7.gif) no-repeat;"><a href="#">缺货登记 登记记录</a></li>
+							<li style="background: url(img/8.gif) no-repeat;"><a href="#">购物车（2）</a></li>
+							<li style="background: url(img/9.gif) no-repeat;"><a href="#">我的收藏（0）</a></li>
+							<li style="background: url(img/10.gif) no-repeat;"><a href="#">对比框（0）</a></li>
+						</ul>
+					</div>
+				</div><!--左边结束-->
+				
+				<!--右边开始-->
+				<div id="pro_right">
+					<!--您的位置-->
+					<div id="myaddress">
+						<span>您的位置：<a href="index.html">首页</a>&nbsp;&raquo;&nbsp;购物车</span>
+					</div><!--您的位置结束-->
+					
+					<div id="shoppinglist" style="text-align: left;">
+						<table id="shopTable" style="width: 100%;">
+							<tr>
+								<th>商品名称</th>
+								<th>单价(元)</th>
+								<th>数量</th>
+								<th>合计(元)</th>
+								<th>类型</th>
+							</tr>
+							<tr>
+								<td style="width: 350px;">男式运动鞋 猫爪野外跑鞋2RMB313-1</td>
+								<td>￥<span class="price">528.00</span></td>
+								<td><span class="count">1</span></td>
+								<td>￥<span class="smalltotal">00.00</span></td>
+								<td>-</td>
+							</tr>
+							<tr>
+								<td style="width: 350px;">美的(midea)电脑版电压力锅PCS507一锅双胆</td>
+								<td>￥<span class="price">389.00</span></td>
+								<td><span class="count">2</span></td>
+								<td>￥<span class="smalltotal">00.00</span></td>
+								<td>-</td>
+							</tr>
+							<tr>
+								<td style="width: 350px;">霍尼韦尔(Honeywell)</td>
+								<td>￥<span class="price">1298.00</span></td>
+								<td><span class="count">1</span></td>
+								<td>￥<span class="smalltotal">00.00</span></td>
+								<td>-</td>
+							</tr>
+						</table>
+						
+						<div style="float: right;font-size: 13px;margin: 3px 0;">
+							共&nbsp;<span class="red" id="count">2</span>&nbsp;件商品&nbsp;价格总计：<span class="red">￥<span id="total">917.00</span>元</span>
+							&nbsp;您是：<span style="color: #00267F;">一般会员</span>(不享受折扣价)
+						</div>
+						<div style="clear: both; float: right;font-size: 13px;margin: 3px 0;">
+							折后价格：<span class="red">￥<span id="endPrice">917.00</span>元</span>&nbsp;&nbsp;获得积分：<span id="jifen">917</span>分
+						</div>
+						<div style="clear: both; float: right;font-size: 12px;margin: 3px 0;">
+							满￥500元免运费
+						</div>
+					</div>
+					
+					<!--结算信息-->
+					<div id="end">
+						<div class="usertitle"><img src="img/lb.gif"/>使用优惠券</div>
+						<table class="usertable">
+							<tr>
+								<td>卡号：</td><td><input type="text" id="cardnum" /></td>
+								<td>密码：</td><td><input type="password" id="cardpsw" /></td>
+								<td><a href="#" onclick="card()">验证</a></td>
+							</tr>
+						</table>
+						
+						<div class="usertitle"><img src="img/lb.gif"/>请填写订货人的详细信息</div>
+						<table class="usertable">
+							<tr><td >姓名：</td><td><input type="text" id="name" /></td></tr>
+							<tr><td>电话：</td><td><input type="tel" id="phone" /></td></tr>
+							<tr><td >邮箱：</td><td><input type="email" id="mail" /></td></tr>
+							<tr><td>地址：</td><td><input type="text" id="address" /></td></tr>
+							<tr><td>邮编：</td><td><input type="text" id="post" /></td></tr>
+						</table>
+						
+						<div class="usertitle"><img src="img/lb.gif"/>请填写收货人的详细信息<span style="margin-left: 10px;"><input type="checkbox" id="copyuser" /><span style="color: #00267F;font-weight: bold;">复制订货人信息</span></span></div>
+						<table class="usertable" style="margin-left: 60px;">
+							<tr>
+								<td><span style="color: #D6290B;margin-right: 5px;">*</span>客户姓名：</td>
+								<td><input type="text" id="name1" /></td>
+							</tr>
+							<tr>
+								<td><span style="color: #D6290B;margin-right: 5px;">*</span>联系电话：</td>
+								<td><input type="text" id="phone1" /></td>
+							</tr>
+							<tr>
+								<td><span style="color: #D6290B;margin-right: 5px;">*</span>电子邮箱：</td>
+								<td><input type="text" id="mail1"/></td>
+							</tr>
+							<tr>
+								<td><span style="color: #D6290B;margin-right: 5px;">*</span>联系地址：</td>
+								<td><input type="text" id="address1" /></td>
+							</tr>
+							<tr>
+								<td><span style="color: #D6290B;margin-right: 5px;">*</span>邮政编码：</td>
+								<td><input type="text" id="post1"/></td>
+							</tr>
+							<tr>
+								<td><span style="color: #D6290B;margin-right: 5px;">*</span>到货时间：</td>
+								<td><input type="radio" checked="checked" />工作时间 8:00-23:00</td>
+							</tr>
+							<tr>
+								<td><span style="color: #D6290B;margin-right: 5px;">*</span>付款方式：</td>
+								<td><input type="radio" checked="checked" />银行转账  【中国工商银行：户名：曾新标  卡号：9558 8036 0216 2390 835】</td>
+							</tr>
+							<tr style="line-height: 15px;"><td></td><td><a href="#" style="color: #D6290B;">关于付款方式的详细说明&raquo;</a></td></tr>
+							<tr>
+								<td><span style="color: #D6290B;margin-right: 5px;">*</span>送货方式：</td>
+								<td><input type="radio" checked="checked" name="kuaidi" />快递送货<a href="#" style="color: #000;margin-left: 5px;">【实惠快递，一般3天到货，收费12元】</a></td>
+							</tr>
+							<tr style="line-height: 15px;">
+								<td><span style="color: #D6290B;margin-right: 5px;"></span></td>
+								<td ><input type="radio" name="kuaidi" />EMS邮寄<a href="#" style="color: #000;margin-left: 5px;">【农村邮寄，一般5天到货，收费23元】</a></td>
+							</tr>
+							<tr style="line-height: 15px;"><td></td><td><a href="#" style="color: #D6290B;">关于送货方式的详细说明&raquo;</a></td></tr>
+							<tr>
+								<td style="text-indent: 10px;">需要发票：</td>
+								<td ><input type="radio" name="fapiao" checked="checked" />需要&nbsp;&nbsp;<input type="radio" name="fapiao" />不需要&nbsp;&nbsp;<a href="#" style="color: #000;">（开发票需要加税点5%）</a></td>
+							</tr>
+							<tr>
+								<td style="text-indent: 10px;">缺货处理：</td>
+								<td ><input type="radio" name="quehuo"  />等待&nbsp;&nbsp;<input type="radio" name="quehuo" checked="checked"/>从订单取消</td>
+							</tr>
+							<tr style="line-height: 15px;">
+								<td style="text-indent: 43px;">备注:<br />(50字以内)</td>
+								<td><textarea name="" rows="3" cols="40"></textarea></td>
+							</tr>
+							<tr><td></td><td><input type="submit" value="提交" style="width: 80px;" onclick="userInfo()"/></td></tr>
+						</table>
+					</div><!--结算信息结束-->
+					
+				</div><!--右边结束-->
+			</div><!--页面中间主体部分结束-->
+			
+			<!--页面底部-->
+			<div id="pageFooter">
+				<!--底部导航开始-->
+				<div id="footnav">
+					<ul class="footnavul">
+						<li class="footnavli">
+							<h4>关于我们</h4>
+							<ul class="footlist">
+								<li><span>&gt;</span><a href="#">发展历程</a></li>
+								<li><span>&gt;</span><a href="#">联系方式</a></li>
+								<li><span>&gt;</span><a href="#">公司介绍</a></li>
+								<li><span>&gt;</span><a href="#">企业文化</a></li>
+							</ul>
+						</li>
+						<li class="footnavli">
+							<h4>付款方式</h4>
+							<ul class="footlist">
+								<li><span>&gt;</span><a href="#">银行汇款</a></li>
+								<li><span>&gt;</span><a href="#">在线支付</a></li>
+								<li><span>&gt;</span><a href="#">货到付款</a></li>
+								<li><span>&gt;</span><a href="#">公司转账</a></li>
+							</ul>
+						</li>
+						<li class="footnavli">
+							<h4>送货方式</h4>
+							<ul class="footlist">
+								<li><span>&gt;</span><a href="#">上门自提</a></li>
+								<li><span>&gt;</span><a href="#">EMS快递</a></li>
+								<li><span>&gt;</span><a href="#">快递发货</a></li>
+								<li><span>&gt;</span><a href="#">平邮发货</a></li>
+							</ul>
+						</li>
+						<li class="footnavli">
+							<h4>售后服务</h4>
+							<ul class="footlist">
+								<li><span>&gt;</span><a href="#">质保承诺</a></li>
+								<li><span>&gt;</span><a href="#">退换货政策</a></li>
+								<li><span>&gt;</span><a href="#">价格保护</a></li>
+								<li><span>&gt;</span><a href="#">返修申请</a></li>
+							</ul>
+						</li>
+						<li class="footnavli">
+							<h4>购物帮助</h4>
+							<ul class="footlist">
+								<li><span>&gt;</span><a href="#">用户等级</a></li>
+								<li><span>&gt;</span><a href="#">积分获得与使用</a></li>
+								<li><span>&gt;</span><a href="#">购物流程</a></li>
+								<li><span>&gt;</span><a href="#">常见问题</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div><!--底部导航结束-->
+				
+				<!--底部信息-->
+				<div id="footInfo">
+					<p><a href="#">淘宝店</a><a href="#">易趣店</a><a href="#">拍拍店</a><a href="#">有啊店</a></p>
+					<p>Copyright 2015 <span>127.0.0.1. </span>All Rights Reserved 版权所有：广州网软志成信息科技有限公司</p>
+					<p>客户服务热线：020-34506590&nbsp;&nbsp;传真：020-34506590</p>
+					<p>客户服务邮箱：<span>webmaster@wrzc.net 粤ICP备06122404号&nbsp;管理进入</span></p>
+				</div><!--底部信息结束-->
+			</div><!--页面底部结束-->
+		</div><!--外部容器结束-->
+		
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/getTime.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				totalPrice();
+				$('#copyuser').click(function(){
+					copyuser();
+				})
+			})
+			
+			function totalPrice(){
+				$('#shopTable .price').each(function(){
+					var price = $(this).text();
+					var num = $(this).parent().parent().children('td').find('.count').text();
+					$(this).parent().parent().children('td').find('.smalltotal').text(price*num);
+				})
+				var total = 0.00;
+				var rows = 0;
+				$('#shopTable .smalltotal').each(function(){
+					total = total + parseFloat($(this).text());
+					rows++;
+					$('#count').text(rows);
+					$('#total').text(total);
+					$('#jifen').text(total);
+					$('#endPrice').text(total);
+				})
+			}
+			
+			function getEle(id){
+				var obj = document.getElementById(id);
+				return obj;
+			}
+			
+			//验证优惠卡号和密码
+			function card(){
+				var cardnum = getEle('cardnum');
+				var cardpsw = getEle('cardpsw');
+				if(cardnum.value==''){
+					alert('优惠卡号不能为空');
+					return false;
+				}
+				if(cardpsw.value==''){
+					alert('优惠卡密码不能为空');
+					return false;
+				}
+				return true;
+			}
+			
+			//验证订货人信息
+			function userInfo(){
+				var name = getEle('name'),
+					phone = getEle('phone'),
+					mail = getEle('mail'),
+					address = getEle('address'),
+					post = getEle('post');
+					
+				if(name.value == ''){
+					alert('姓名不能为空');
+					return false;
+				}
+				var phoneReg = /^((\(\d{3}\))|(\d{3}\-))?13\d{9}|15\d{9}|17\d{9}|18\d{9}$/;
+				if(phone.value == ''){
+					alert('电话号码不能为空');
+					return false;
+				}else if(!phone.value.match(phoneReg)){
+					alert('请输入正确的手机号码');
+					return false;
+				}
+				var mailReg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/;
+				if(mail.value == ''){
+					alert('邮箱不能为空');
+					return false;
+				}else if(!mail.value.match(mailReg)){
+					alert('请输入正确的邮箱');
+					return false;
+				}
+				if(address.value == ''){
+					alert('地址不能为空');
+					return false;
+				}
+				var postReg = /[1-9]\d{5}(?!\d)$/;
+				if(post.value == ''){
+					alert('邮编不能为空');
+					return false;
+				}else if(!post.value.match(postReg)){
+					alert('请输入正确的邮政编码');
+					return false;
+				}
+				shouhuoInfo();
+			}
+			
+			
+			//验证收货人信息
+			function shouhuoInfo(){
+				var name1 = getEle('name1'),
+					phone1 = getEle('phone1'),
+					address1 = getEle('address1');
+					
+				if(name1.value == ''){
+					alert('收货人姓名不能为空');
+					return false;
+				}
+				var phoneReg1 = /^((\(\d{3}\))|(\d{3}\-))?13\d{9}|15\d{9}|17\d{9}|18\d{9}$/;
+				if(phone1.value == ''){
+					alert('收货人电话号码不能为空');
+					return false;
+				}else if(!phone1.value.match(phoneReg1)){
+					alert('请输入收货人正确的手机号码');
+					return false;
+				}
+				
+				if(address1.value == ''){
+					alert('收货人地址不能为空');
+					return false;
+				}
+			}
+			
+			function copyuser(){
+				var name = getEle('name').value,
+					phone = getEle('phone').value,
+					mail = getEle('mail').value,
+					address = getEle('address').value,
+					post = getEle('post').value;
+					
+				var name1 = getEle('name1'),
+					phone1 = getEle('phone1'),
+					mail1 = getEle('mail1'),
+					address1 = getEle('address1'),
+					post1 = getEle('post1');
+				
+				var copy = getEle('copyuser')
+				
+				if(copy.checked){
+					name1.value = name;
+					phone1.value = phone;
+					mail1.value = mail;
+					address1.value = address;
+					post1.value = post;	
+				}else{
+					name1.value = '';
+					phone1.value = '';
+					mail1.value = '';
+					address1.value = '';
+					post1.value = '';	
+				}
+			}
+		</script>
+	</body>
+</html>
+
